@@ -86,8 +86,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Splash Screen][product-screenshot]](https://user-images.githubusercontent.com/69615570/119268911-3a1e3b80-bc1f-11eb-98f6-96eab9172264.jpg)
-<img src="https://user-images.githubusercontent.com/69615570/119268911-3a1e3b80-bc1f-11eb-98f6-96eab9172264.jpg" alt="Logo" width="200" height="200">
+**Splash Screen**
+<img src="https://user-images.githubusercontent.com/69615570/119268911-3a1e3b80-bc1f-11eb-98f6-96eab9172264.jpg" alt="Logo" width="1080" height="2306">
 
 Meet VISION, a comprehensive Reporting Android App for helping the validation process using object detection to provide safety, time efficiency, and quality delivers right at the fingertips of its users. The outline of this project is to create a comprehensive report from users to the government. Our application feature can validate pothole images from users sent to our cloud server using machine learning and the user's report contains location & images to see the details of the roads from other users. Also, we will provide the visualization for the reported case in potholes type, count, dates, and location.
 
