@@ -1,5 +1,6 @@
 # B21-CAP0388
-Bangkit Capstone Project 2021: Pothole Validation Report System Application (FULL)
+Bangkit Capstone Project 2021: Validating Potholes Using Object Detection on Monitoring and Report
+System Application
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
 *** that would make this better, please fork the repo and create a pull request
