@@ -86,7 +86,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <p align="center">
-   <strong>Splash Screen          </strong>      <strong>     Location/Maps Feature     </strong>      <strong>          Report Result</strong>  
+  <pre>
+   <strong>Splash Screen          </strong>      <strong>     Location/Maps Feature     </strong>      <strong>          Report Result</strong></pre>
 
 <p align="center">
    <img src="https://user-images.githubusercontent.com/69615570/119268911-3a1e3b80-bc1f-11eb-98f6-96eab9172264.jpg" alt="Logo" width="270" height="576.5">             <img src="https://user-images.githubusercontent.com/69615570/119268906-37bbe180-bc1f-11eb-8a67-a94e9bef21aa.jpg" alt="Logo" width="270" height="576.5">              <img src="https://user-images.githubusercontent.com/69615570/119268914-3b4f6880-bc1f-11eb-8fd5-13f35a9ff090.jpg" alt="Logo" width="270" height="576.5">
