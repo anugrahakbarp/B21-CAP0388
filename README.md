@@ -40,7 +40,7 @@
   <h2 align="center">Bangkit Capstone Project 2021: Validating Potholes Using Object Detection on Monitoring and Report System Application</h2>
 
   <p align="center">
-    Project Documentation Here:
+    Documentation Available Here:
     <br />
     <a href="https://docs.google.com/document/d/1-W_qnjDcqY2GAJGV1wSwdfEx_0f4BUwIOsrZp9TgY0U/edit?usp=sharing"><strong>Explore the docs »</strong></a>
     <br />
