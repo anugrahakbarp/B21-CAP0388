@@ -89,7 +89,8 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started:
+Meet VISION, a comprehensive Reporting Android App for helping the validation process using object detection to provide safety, time efficiency, and quality delivers right on the fingertips of its users. The outline of this project is to create a comprehensive report from users to the government. Our application feature can validate pothole images from users sent to our cloud server using machine learning and the user's report contains location & images to see the details of the roads from other users. Also we will provide the visualization for the reported case in potholes type, count, dates, and location.
+
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
 `github_username`, `repo_name`, `twitter_handle`, `email`, `project_title`, `project_description`
 
