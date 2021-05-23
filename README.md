@@ -132,8 +132,12 @@ This is an example of how to list things you need to use the software and how to
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+* Accelerate Consumer Centric Growth
+* Accelerate Business Income Using A.I. Technology
+* Connector Between The Public & Government
+* RPJMN (Rencana Pembangunan Jangka Menengah Nasional) Fulfillment
+* Using as A Government Official App Maintain By The Stakeholder
+* Validation System using Object Detection
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
@@ -162,27 +166,28 @@ Contributions are what make the open source community such an amazing place to b
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the GNU GENERAL PUBLIC LICENSE VERSION 3. See `LICENSE` for more information.
 
 
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
+* Anugrah Akbar Praramadhan - [anugrahakbar109@gmail.com](https://mail.google.com/mail/u/0/#inbox?compose=new)
+* Anugrah Akbar Praramadhan - [anugrahakbar109@gmail.com](https://mail.google.com/mail/u/0/#inbox?compose=new)
+* Anugrah Akbar Praramadhan - [anugrahakbar109@gmail.com](https://mail.google.com/mail/u/0/#inbox?compose=new)
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/anugrahakbarp/B21-CAP0388](https://github.com/anugrahakbarp/B21-CAP0388)
 
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* []()
-* []()
-* []()
-
-
+* [ALL LICENSE ARE FREE TO USE SOFTWARE]()
+* [CREDIT FOR THIS PROJECT ARE HAVING BY GEN-Z TEAM]()
+* [PLEASE REFERS TO THIS REPOSITORY FOR USAGE & PUBLICATION]()
+* [THERE IS NO WARRANTY IN THIS SOFTWARE]()
 
 
 
@@ -197,6 +202,6 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [issues-shield]: https://img.shields.io/github/issues/anugrahakbarp/B21-CAP0388.svg?style=for-the-badge
 [issues-url]: https://github.com/anugrahakbarp/B21-CAP0388/issues
 [license-shield]: https://img.shields.io/github/license/anugrahakbarp/B21-CAP0388.svg?style=for-the-badge
-[license-url]: https://github.com/anugrahakbarp/B21-CAP0388/blob/master/LICENSE.txt
+[license-url]: https://github.com/anugrahakbarp/B21-CAP0388/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/anugrahakbarp/
