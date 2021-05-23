@@ -34,8 +34,8 @@ Bangkit Capstone Project 2021: Pothole Validation Report System Application (FUL
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/anugrahakbarp/B211-CAP0388">
+    <img src="https://drive.google.com/file/d/1Hm02d1rA6NJez9qlcnAPszmZ3Cq2UwSg/view?usp=sharing" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">project_title</h3>
