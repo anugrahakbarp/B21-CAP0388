@@ -93,7 +93,7 @@ Meet VISION, a comprehensive Reporting Android App for helping the validation pr
 
 ### Built With
 
-* [](Android Studio Native)
+* (Android Studio Native)
 * [](Firebase)
 * [](Google Cloud Platform Services)
 * [](YOLO-V4 Model Based Architecture)
