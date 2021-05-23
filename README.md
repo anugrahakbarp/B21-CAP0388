@@ -7,7 +7,7 @@
 ***
 ***
 ***
-*** To avoid retyping too much info. Do a search and replace for the following:
+*** To avoid retyping too much info. Search and replace for the following:
 *** github_username, repo_name, twitter_handle, email, project_title, project_description
 -->
 
@@ -18,7 +18,7 @@
 *** I'm using markdown "reference style" links for readability.
 *** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
 *** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** for contributors-URL, forks-URL, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 [![Contributors][contributors-shield]][contributors-url]
@@ -89,7 +89,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Meet VISION, a comprehensive Reporting Android App for helping the validation process using object detection to provide safety, time efficiency, and quality delivers right on the fingertips of its users. The outline of this project is to create a comprehensive report from users to the government. Our application feature can validate pothole images from users sent to our cloud server using machine learning and the user's report contains location & images to see the details of the roads from other users. Also we will provide the visualization for the reported case in potholes type, count, dates, and location.
+Meet VISION, a comprehensive Reporting Android App for helping the validation process using object detection to provide safety, time efficiency, and quality delivers right at the fingertips of its users. The outline of this project is to create a comprehensive report from users to the government. Our application feature can validate pothole images from users sent to our cloud server using machine learning and the user's report contains location & images to see the details of the roads from other users. Also, we will provide the visualization for the reported case in potholes type, count, dates, and location.
 
 ### Built With
 
@@ -132,7 +132,7 @@ This is an example of how to list things you need to use the software and how to
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-* Accelerate Consumer Centric Growth
+* Accelerate Consumer-Centric Growth
 * Accelerate Business Income Using A.I. Technology
 * Connector Between The Public & Government
 * RPJMN (Rencana Pembangunan Jangka Menengah Nasional) Fulfillment
@@ -153,7 +153,7 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -187,10 +187,10 @@ Project Link: [https://github.com/anugrahakbarp/B21-CAP0388](https://github.com/
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-*ALL LICENSE ARE FREE TO USE SOFTWARE
-*CREDIT FOR THIS PROJECT ARE HAVING BY GEN-Z TEAM
-*PLEASE REFERS TO THIS REPOSITORY FOR USAGE & PUBLICATION
-*THERE IS NO WARRANTY IN THIS SOFTWARE
+_ALL LICENSE ARE FREE TO USE SOFTWARE_
+*CREDIT FOR THIS PROJECT ARE HAVING BY GEN-Z TEAM*
+*PLEASE REFERS TO THIS REPOSITORY FOR USAGE & PUBLICATION*
+*THERE IS NO WARRANTY IN THIS SOFTWARE*
 
 
 
