@@ -42,14 +42,14 @@
   <p align="center">
     project_description
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/anugrahakbarp/B21-CAP0388/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/anugrahakbarp/B21-CAP0388/">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/anugrahakbarp/B21-CAP0388/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/anugrahakbarp/B21-CAP0388/issues">Request Feature</a>
   </p>
 </p>
 
@@ -185,15 +185,15 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/anugrahakbarp/repo.svg?style=for-the-badge
+[contributors-url]: https://github.com/anugrahakbarp/repo/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/anugrahakbarp/repo.svg?style=for-the-badge
+[forks-url]: https://github.com/anugrahakbarp/repo/network/members
+[stars-shield]: https://img.shields.io/github/stars/anugrahakbarp/repo.svg?style=for-the-badge
+[stars-url]: https://github.com/anugrahakbarp/repo/stargazers
+[issues-shield]: https://img.shields.io/github/issues/anugrahakbarp/repo.svg?style=for-the-badge
+[issues-url]: https://github.com/anugrahakbarp/repo/issues
+[license-shield]: https://img.shields.io/github/license/anugrahakbarp/repo.svg?style=for-the-badge
+[license-url]: https://github.com/anugrahakbarp/repo/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/github_username
+[linkedin-url]: https://linkedin.com/in/anugrahakbarp/
