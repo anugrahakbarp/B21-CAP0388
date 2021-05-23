@@ -74,7 +74,6 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -132,21 +131,14 @@ This is an example of how to list things you need to use the software and how to
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-* Accelerate Consumer-Centric Growth
-* Accelerate Business Income Using A.I. Technology
-* Connector Between The Public & Government
-* RPJMN (Rencana Pembangunan Jangka Menengah Nasional) Fulfillment
-* Using as A Government Official App Maintain By The Stakeholder
-* Validation System using Object Detection
+* Accelerate Consumer-Centric Growth.
+* Accelerate Business Income Using A.I. Technology.
+* Connector Between The Public & Government.
+* RPJMN (Rencana Pembangunan Jangka Menengah Nasional) Fulfillment.
+* Using as A Government Official App Maintain By The Stakeholder.
+* Validation System using Object Detection.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
 
 
 
@@ -174,11 +166,11 @@ Distributed under the GNU GENERAL PUBLIC LICENSE VERSION 3. See `LICENSE` for mo
 ## Contact
 
 * Anugrah Akbar Praramadhan - [anugrahakbar109@gmail.com](https://mail.google.com/mail/u/0/#inbox?compose=new)
-* Ade Isman Aji - [anugrahakbar109@gmail.com](https://mail.google.com/mail/u/0/#inbox?compose=new)
-* Carmelita Evani Dasopang - [anugrahakbar109@gmail.com](https://mail.google.com/mail/u/0/#inbox?compose=new)
-* Muhammad Dicky Amirudin - [anugrahakbar109@gmail.com](https://mail.google.com/mail/u/0/#inbox?compose=new)
+* Ade Isman Aji - [-](https://mail.google.com/mail/u/0/#inbox?compose=new)
+* Carmelita Evani Dasopang - [-](https://mail.google.com/mail/u/0/#inbox?compose=new)
+* Muhammad Dicky Amirudin - [-](https://mail.google.com/mail/u/0/#inbox?compose=new)
 * Naufaldy Salsabila - [naufaldysalsabila@gmail.com](https://mail.google.com/mail/u/0/#inbox?compose=new)
-* Wily Silviana Yeni Pratama - [anugrahakbar109@gmail.com](https://mail.google.com/mail/u/0/#inbox?compose=new)
+* Wily Silviana Yeni Pratama - [-](https://mail.google.com/mail/u/0/#inbox?compose=new)
 
 Project Link: [https://github.com/anugrahakbarp/B21-CAP0388](https://github.com/anugrahakbarp/B21-CAP0388)
 
@@ -187,13 +179,13 @@ Project Link: [https://github.com/anugrahakbarp/B21-CAP0388](https://github.com/
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* _ALL LICENSE ARE FREE TO USE SOFTWARE_  
+* _ALL LICENSE ARE FREE TO USE SOFTWARE._  
 
-* _CREDIT FOR THIS PROJECT ARE HAVING BY GEN-Z TEAM_  
+* _CREDIT FOR THIS PROJECT ARE HAVING BY GEN-Z TEAM._  
 
-* _PLEASE REFERS TO THIS REPOSITORY FOR USAGE & PUBLICATION_  
+* _PLEASE REFERS TO THIS REPOSITORY FOR USAGE & PUBLICATION._  
 
-* _THERE IS NO WARRANTY IN THIS SOFTWARE_
+* _THERE IS NO WARRANTY IN THIS SOFTWARE._
 
 
 
