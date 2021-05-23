@@ -86,7 +86,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[Product Name Screen Shot](https://user-images.githubusercontent.com/69615570/119268911-3a1e3b80-bc1f-11eb-98f6-96eab9172264.jpg)
 
 Meet VISION, a comprehensive Reporting Android App for helping the validation process using object detection to provide safety, time efficiency, and quality delivers right at the fingertips of its users. The outline of this project is to create a comprehensive report from users to the government. Our application feature can validate pothole images from users sent to our cloud server using machine learning and the user's report contains location & images to see the details of the roads from other users. Also, we will provide the visualization for the reported case in potholes type, count, dates, and location.
 
@@ -166,11 +166,11 @@ Distributed under the GNU GENERAL PUBLIC LICENSE VERSION 3. See `LICENSE` for mo
 ## Contact
 
 * Anugrah Akbar Praramadhan - [anugrahakbar109@gmail.com](https://mail.google.com/mail/u/0/#inbox?compose=new)
-* Ade Isman Aji - [-](https://mail.google.com/mail/u/0/#inbox?compose=new)
-* Carmelita Evani Dasopang - [-](https://mail.google.com/mail/u/0/#inbox?compose=new)
-* Muhammad Dicky Amirudin - [-](https://mail.google.com/mail/u/0/#inbox?compose=new)
+* Ade Isman Aji - [adeismanaji@gmail.com](https://mail.google.com/mail/u/0/#inbox?compose=new)
+* Carmelita Evani Dasopang - [null](https://mail.google.com/mail/u/0/#inbox?compose=new)
+* Muhammad Dicky Amirudin - [null](https://mail.google.com/mail/u/0/#inbox?compose=new)
 * Naufaldy Salsabila - [naufaldysalsabila@gmail.com](https://mail.google.com/mail/u/0/#inbox?compose=new)
-* Wily Silviana Yeni Pratama - [-](https://mail.google.com/mail/u/0/#inbox?compose=new)
+* Wily Silviana Yeni Pratama - [null](https://mail.google.com/mail/u/0/#inbox?compose=new)
 
 Project Link: [https://github.com/anugrahakbarp/B21-CAP0388](https://github.com/anugrahakbarp/B21-CAP0388)
 
