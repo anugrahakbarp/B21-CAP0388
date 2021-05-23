@@ -1,6 +1,4 @@
 # B21-CAP0388
-Bangkit Capstone Project 2021: Validating Potholes Using Object Detection on Monitoring and Report
-System Application
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
 *** that would make this better, please fork the repo and create a pull request
@@ -39,7 +37,7 @@ System Application
     <img src="https://user-images.githubusercontent.com/69615570/119249729-129a8500-bbc5-11eb-9e61-1cecd7084d03.png" alt="Logo" width="200" height="200">
   </a>
 
-  <h3 align="center">project_title</h3>
+  <h2 align="center">Bangkit Capstone Project 2021: Validating Potholes Using Object Detection on Monitoring and Report System Application</h2>
 
   <p align="center">
     project_description
