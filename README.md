@@ -42,13 +42,13 @@
   <p align="center">
     project_description
     <br />
-    <a href="https://github.com/anugrahakbarp/B21-CAP0388/"><strong>Explore the docs »</strong></a>
+    <a href="https://docs.google.com/document/d/1-W_qnjDcqY2GAJGV1wSwdfEx_0f4BUwIOsrZp9TgY0U/edit?usp=sharing"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/anugrahakbarp/B21-CAP0388/">View Demo</a>
+    <a href="">View Demo</a>
     ·
     <a href="https://github.com/anugrahakbarp/B21-CAP0388/issues">
-      rt Bug</a>
+      Report Bug</a>
     ·
     <a href="https://github.com/anugrahakbarp/B21-CAP0388/issues">Request Feature</a>
   </p>
