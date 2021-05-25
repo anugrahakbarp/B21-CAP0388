@@ -109,41 +109,37 @@
 
 
 <!-- GETTING STARTED -->
-## Getting Started
-
-To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+- Android Oreo (SDK 26)
+- Internet Connection
 
 ### Installation
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
+1. Download THe APK
+2. Install the APK
 
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
-* Accelerate Consumer-Centric Growth.
-* Accelerate Business Income Using A.I. Technology.
-* Connector Between The Public & Government.
-* RPJMN (Rencana Pembangunan Jangka Menengah Nasional) Fulfillment.
-* Using as A Government Official App Maintain By The Stakeholder.
-* Validation System using Object Detection.
+## Usage (WIP)
+<B>How to report a pothole</B>
+1. Login to your account
+2. Choose "Add Report" on the menu
+3. Fill the road type, and the location, you can also fill the note to inform about the pothole in detail
+4. After that choose select image to upload the pothole photo, you can use your camera or pick one from gallery. Be sure that the pothole is visible on the photo
+5. Now you can send the pothole report by tapping on the arrow on the bottom right
+6. The report then will be validated by the system
+7. you can see all the report you have made on the "My Report" menu
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<B> How to Search the pothole location</B>
+1. Choose "Search" on the menu
+2. Enter the address you want to search for on the search bar
+
+
+
+
 
 
 
