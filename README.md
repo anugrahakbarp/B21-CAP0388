@@ -169,7 +169,7 @@ Distributed under the GNU GENERAL PUBLIC LICENSE VERSION 3. See `LICENSE` for mo
 * Anugrah Akbar Praramadhan - [anugrahakbar109@gmail.com](https://mail.google.com/mail/u/0/#inbox?compose=new)
 * Ade Isman Aji - [adeismanaji@gmail.com](https://mail.google.com/mail/u/0/#inbox?compose=new)
 * Carmelita Evani Dasopang - [null](https://mail.google.com/mail/u/0/#inbox?compose=new)
-* Muhammad Dicky Amirudin - [null](https://mail.google.com/mail/u/0/#inbox?compose=new)
+* Muhammad Dicky Amirudin - [dicky.king35@gmail.com](https://mail.google.com/mail/u/0/#inbox?compose=new)
 * Naufaldy Salsabila - [naufaldysalsabila@gmail.com](https://mail.google.com/mail/u/0/#inbox?compose=new)
 * Wily Silviana Yeni Pratama - [null](https://mail.google.com/mail/u/0/#inbox?compose=new)
 
