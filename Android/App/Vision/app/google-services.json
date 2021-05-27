@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "1020597082046",
+    "project_id": "vision-bangkit",
+    "storage_bucket": "vision-bangkit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020597082046:android:1f474fcd418e4c5cb94bef",
+        "android_client_info": {
+          "package_name": "com.bangkit.capstone.vision"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1020597082046-8vhi1028qevilc1thbnivf52tf7nc2fb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBn35SJv5aHe-QSEvTzBwXul9aaPr6iXGg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1020597082046-8vhi1028qevilc1thbnivf52tf7nc2fb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020597082046:android:f2322808c10a5340b94bef",
+        "android_client_info": {
+          "package_name": "com.bangkit.capstone.visionadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1020597082046-8vhi1028qevilc1thbnivf52tf7nc2fb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBn35SJv5aHe-QSEvTzBwXul9aaPr6iXGg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1020597082046-8vhi1028qevilc1thbnivf52tf7nc2fb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
