@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_700">
+
+    <RelativeLayout
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_700"
+        android:elevation="8dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:elevation="8dp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".DetailReportActivity">
+
+        <LinearLayout
+            android:id="@+id/detailContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgRoad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/image_valid"
+                android:elevation="8dp"
+                android:maxHeight="200dp"
+                android:paddingHorizontal="20dp"
+                android:scaleType="fitCenter"
+                android:visibility="visible"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@color/teal_700" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvBestAccuracy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/white"
+                android:orientation="vertical"
+                android:padding="20dp"
+                app:cardElevation="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/imgRoad">
+
+                <TextView
+                    android:id="@+id/bestAccuracy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:padding="20dp"
+                    android:text="@string/best_accuracy"
+                    android:textColor="@color/label"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvBestAccuracy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:gravity="start"
+                    android:padding="20dp"
+                    android:textColor="@color/label"
+                    tools:text="@string/best_accuracy" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvUploadedBy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/white"
+                android:orientation="vertical"
+                android:padding="20dp"
+                app:cardElevation="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/cvUploadedBy">
+
+                <TextView
+                    android:id="@+id/titleUploadedBy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:padding="20dp"
+                    android:text="@string/upload_by"
+                    android:textColor="@color/label"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvUploadedBy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:gravity="start"
+                    android:padding="20dp"
+                    android:textColor="@color/label"
+                    tools:text="@string/username" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/white"
+                android:orientation="vertical"
+                android:padding="20dp"
+                app:cardElevation="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/cvTime">
+
+                <TextView
+                    android:id="@+id/titleTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:padding="20dp"
+                    android:text="@string/time"
+                    android:textColor="@color/label"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:gravity="start"
+                    android:padding="20dp"
+                    android:textColor="@color/label"
+                    tools:text="@string/time" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/white"
+                android:orientation="vertical"
+                android:padding="20dp"
+                app:cardElevation="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/cvAddress">
+
+                <TextView
+                    android:id="@+id/titleAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="start"
+                    android:padding="20dp"
+                    android:text="@string/address"
+                    android:textColor="@color/label"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:maxLines="3"
+                    android:minLines="3"
+                    android:padding="20dp"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/label"
+                    tools:text="@string/sample_address" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:backgroundTint="@color/white"
+                android:orientation="vertical"
+                android:padding="20dp"
+                app:cardElevation="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/cvAddress">
+
+                <TextView
+                    android:id="@+id/titleNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="start"
+                    android:padding="20dp"
+                    android:text="@string/note"
+                    android:textColor="@color/label"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:gravity="start"
+                    android:maxLines="3"
+                    android:minLines="3"
+                    android:padding="20dp"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/label"
+                    tools:text="@string/note" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

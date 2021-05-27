@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_200">#21C1FF</color>
+    <color name="color_500">#1789B5</color>
+    <color name="color_700">#055472</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="label">#2A2A2A</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#00AA00</color>
+    <color name="red">#F44336</color>
+    <color name="orange">#FF9800</color>
+</resources>

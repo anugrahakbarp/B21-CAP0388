@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_all_report"
+        android:icon="@drawable/all_report_selector"
+        android:title="@string/title_all_report" />
+
+    <item
+        android:id="@+id/navigation_search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="@string/title_search" />
+
+    <item
+        android:id="@+id/navigation_add_report"
+        android:icon="@drawable/add_report_selector"
+        android:title="@string/title_add_report" />
+
+    <item
+        android:id="@+id/navigation_my_report"
+        android:icon="@drawable/my_report_selector"
+        android:title="@string/title_my_report" />
+
+    <item
+        android:id="@+id/navigation_monitor"
+        android:icon="@drawable/monitor_selector"
+        android:title="@string/title_monitor" />
+
+</menu>

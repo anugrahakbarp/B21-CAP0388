@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_baseline_logout_24"
+        android:title="@string/logout"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="@string/title_search"
+        android:visible="false"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/maps"
+        android:icon="@drawable/ic_baseline_map_24_white"
+        android:title="@string/maps"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/sortNewest"
+            android:checked="true"
+            android:title="@string/newest"
+            android:visible="false" />
+        <item
+            android:id="@+id/sortOldest"
+            android:checked="false"
+            android:title="@string/oldest"
+            android:visible="false" />
+    </group>
+
+</menu>

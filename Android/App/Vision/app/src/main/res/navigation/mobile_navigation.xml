@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_add_report">
+
+    <fragment
+        android:id="@+id/navigation_all_report"
+        android:name="com.bangkit.capstone.vision.ui.allReport.AllReportFragment"
+        android:label="@string/title_all_report"
+        tools:layout="@layout/fragment_all_report">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.bangkit.capstone.vision.ui.search.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_add_report"
+        android:name="com.bangkit.capstone.vision.ui.addReport.AddReportFragment"
+        android:label="@string/title_add_report"
+        tools:layout="@layout/fragment_add_report" />
+
+    <fragment
+        android:id="@+id/navigation_my_report"
+        android:name="com.bangkit.capstone.vision.ui.myReport.MyReportFragment"
+        android:label="@string/title_my_report"
+        tools:layout="@layout/fragment_my_report" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.bangkit.capstone.vision.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_monitor"
+        android:name="com.bangkit.capstone.vision.ui.monitor.MonitorFragment"
+        android:label="@string/title_monitor"
+        tools:layout="@layout/fragment_monitor" />
+</navigation>
