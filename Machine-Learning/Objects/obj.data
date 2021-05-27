@@ -1,0 +1,5 @@
+classes = 1
+train = /content/drive/MyDrive/Capstone_Project/Colab/YOLOV4-Pothole/workspace/dataset/train.txt
+valid = /content/drive/MyDrive/Capstone_Project/Colab/YOLOV4-Pothole/workspace/dataset/test.txt
+names = /content/drive/MyDrive/Capstone_Project/Colab/YOLOV4-Pothole/workspace/object/data/obj.names
+backup = /content/drive/MyDrive/Capstone_Project/Colab/YOLOV4-Pothole/workspace/training-backup
