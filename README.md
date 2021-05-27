@@ -45,7 +45,7 @@
     <a href="https://docs.google.com/document/d/1-W_qnjDcqY2GAJGV1wSwdfEx_0f4BUwIOsrZp9TgY0U/edit?usp=sharing"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="">View Demo</a>
+    <a href="https://drive.google.com/file/d/1bJIlXPU_RoohGWevgEt_p-BEMLe15mgd/view?usp=drivesdk">View Demo</a>
     ·
     <a href="https://github.com/anugrahakbarp/B21-CAP0388/issues">
       Report Bug</a>
