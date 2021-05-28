@@ -112,13 +112,14 @@
 
 ### Prerequisites
 
-- Android Oreo (SDK 26)
-- Internet Connection
+* Android Oreo (SDK 26)
+* Internet Connection
+* GPS/Location
 
 ### Installation
 
-1. Download THe APK
-2. Install the APK
+1. Download The APK
+2. Install The APK
 
 
 
