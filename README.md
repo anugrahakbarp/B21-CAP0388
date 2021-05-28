@@ -112,9 +112,9 @@
 
 ### Prerequisites
 
-* Android Oreo (SDK 26)
-* Internet Connection
-* GPS/Location
+1. Android Oreo (SDK 26)
+2. Internet Connection
+3. GPS/Location
 
 ### Installation
 
