@@ -8,9 +8,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.view.inputmethod.InputMethodManager
 import android.widget.FrameLayout
 import android.widget.Toast
@@ -31,6 +29,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.GeoPoint
 import com.google.firebase.storage.FirebaseStorage
 import com.theartofdev.edmodo.cropper.CropImage
+import com.theartofdev.edmodo.cropper.CropImageOptions
 import com.theartofdev.edmodo.cropper.CropImageView
 import java.io.ByteArrayOutputStream
 import java.util.*
@@ -328,12 +327,12 @@ class AddReportFragment : Fragment() {
                 ContextCompat.getSystemService(requireContext(), InputMethodManager::class.java)!!
             inputMethodManager.hideSoftInputFromWindow(it?.windowToken, 0)
         }
-        fragmentAddReportBinding.imgCaptured.setImageDrawable(null)
         fragmentAddReportBinding.edtLocation.setText("")
         fragmentAddReportBinding.edtNote.setText("")
         fragmentAddReportBinding.tvAccuracy.text = ""
         fragmentAddReportBinding.tvAccuracy.visibility = View.GONE
         fragmentAddReportBinding.tvTitleAccuracy.visibility = View.GONE
+        fragmentAddReportBinding.imgCaptured.setImageDrawable(null)
         imageBitmap = null
     }
 
@@ -344,6 +343,12 @@ class AddReportFragment : Fragment() {
                 val result = CropImage.getActivityResult(data)
                 if (resultCode == AppCompatActivity.RESULT_OK) {
                     processImage(result.uri)
+                } else if (resultCode == AppCompatActivity.RESULT_CANCELED) {
+                    fragmentAddReportBinding.tvAccuracy.text = ""
+                    fragmentAddReportBinding.tvAccuracy.visibility = View.GONE
+                    fragmentAddReportBinding.tvTitleAccuracy.visibility = View.GONE
+                    fragmentAddReportBinding.imgCaptured.setImageDrawable(null)
+                    imageBitmap = null
                 } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
                     snackBar(
                         fragmentAddReportBinding.root,
