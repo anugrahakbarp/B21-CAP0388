@@ -194,7 +194,17 @@ class AddReportFragment : Fragment() {
             fragmentAddReportBinding.edtNote.error = getString(R.string.required)
         }
         if (imageBitmap != null && distance != null && location.isNotEmpty() && note.isNotEmpty()) {
-            uploadFile()
+            val confirmDialog = AlertDialog.Builder(activity)
+            confirmDialog.setCancelable(false)
+            confirmDialog.setTitle(getString(R.string.confirmation))
+            confirmDialog.setMessage(getString(R.string.want_to_send_report))
+            confirmDialog.setPositiveButton(getString(R.string.yes)) { _, _ ->
+                uploadFile()
+            }
+            confirmDialog.setNegativeButton(getString(R.string.cancel)) { dialog, _ ->
+                dialog.dismiss()
+            }
+            confirmDialog.show()
         }
     }
 

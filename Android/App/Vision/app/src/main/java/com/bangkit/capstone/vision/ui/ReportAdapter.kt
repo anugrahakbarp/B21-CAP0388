@@ -19,6 +19,10 @@ class ReportAdapter : RecyclerView.Adapter<ReportAdapter.LiveViewHolder>() {
         this.notifyDataSetChanged()
     }
 
+    fun getReports(): List<ReportEntity> {
+        return listReports
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LiveViewHolder {
         val itemsReportBinding =
             ItemsReportBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -42,7 +46,7 @@ class ReportAdapter : RecyclerView.Adapter<ReportAdapter.LiveViewHolder>() {
                     itemView.context.startActivity(intent)
                 }
                 tvItemReport.text = reports.address
-                tvItemDistance.text = "${reports.distance} from your location"
+                tvItemDistance.text = "${reports.distance} from ${reports.upload_by}"
                 tvItemDate.text = DateUtils.getFromDate(reports.time)
             }
         }

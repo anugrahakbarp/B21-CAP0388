@@ -46,6 +46,17 @@ class MyPendingFragment : Fragment() {
             setHasFixedSize(true)
         }
 
+        getAllDesc()
+
+        fragmentPendingBinding.swipePendingContainer.setOnRefreshListener {
+            getAllDesc()
+            fragmentPendingBinding.swipePendingContainer.isRefreshing = false
+        }
+
+        return fragmentPendingBinding.root
+    }
+
+    private fun getAllDesc() {
         fragmentPendingBinding.progressBar.visibility = View.VISIBLE
         viewModel.getMyPendingReportsDesc(
             username,
@@ -54,8 +65,17 @@ class MyPendingFragment : Fragment() {
             reportAdapter.setReports(list)
             fragmentPendingBinding.progressBar.visibility = View.GONE
         })
+    }
 
-        return fragmentPendingBinding.root
+    private fun getAllAsc() {
+        fragmentPendingBinding.progressBar.visibility = View.VISIBLE
+        viewModel.getMyPendingReports(
+            username,
+            fragmentPendingBinding
+        ).observe(viewLifecycleOwner, { list ->
+            reportAdapter.setReports(list)
+            fragmentPendingBinding.progressBar.visibility = View.GONE
+        })
     }
 
     override fun onPrepareOptionsMenu(menu: Menu) {
@@ -69,24 +89,10 @@ class MyPendingFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.sortNewest -> {
-                fragmentPendingBinding.progressBar.visibility = View.VISIBLE
-                viewModel.getMyPendingReportsDesc(
-                    username,
-                    fragmentPendingBinding
-                ).observe(viewLifecycleOwner, { list ->
-                    reportAdapter.setReports(list)
-                    fragmentPendingBinding.progressBar.visibility = View.GONE
-                })
+                getAllDesc()
             }
             R.id.sortOldest -> {
-                fragmentPendingBinding.progressBar.visibility = View.VISIBLE
-                viewModel.getMyPendingReports(
-                    username,
-                    fragmentPendingBinding
-                ).observe(viewLifecycleOwner, { list ->
-                    reportAdapter.setReports(list)
-                    fragmentPendingBinding.progressBar.visibility = View.GONE
-                })
+                getAllAsc()
             }
         }
         item.isChecked = true

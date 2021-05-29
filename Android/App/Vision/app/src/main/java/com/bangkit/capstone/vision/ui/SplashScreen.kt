@@ -1,10 +1,10 @@
 package com.bangkit.capstone.vision.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import androidx.appcompat.app.AppCompatActivity
 import com.bangkit.capstone.vision.R
 import com.bangkit.capstone.vision.ui.auth.AuthenticationActivity
 

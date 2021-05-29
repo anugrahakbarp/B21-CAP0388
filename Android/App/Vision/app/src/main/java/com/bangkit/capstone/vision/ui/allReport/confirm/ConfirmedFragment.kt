@@ -15,6 +15,7 @@ class ConfirmedFragment : Fragment() {
     private lateinit var fragmentConfirmedBinding: FragmentConfirmedBinding
 
     private lateinit var viewModel: AllReportViewModel
+
     private lateinit var reportAdapter: ReportAdapter
 
     override fun onCreateView(
@@ -32,20 +33,39 @@ class ConfirmedFragment : Fragment() {
 
         reportAdapter = ReportAdapter()
 
-        fragmentConfirmedBinding.progressBar.visibility = View.VISIBLE
         with(fragmentConfirmedBinding.rvConfirmedReport) {
             layoutManager = LinearLayoutManager(context)
             adapter = reportAdapter
             setHasFixedSize(true)
         }
 
+        getAllDesc()
+
+        fragmentConfirmedBinding.swipeConfirmedContainer.setOnRefreshListener {
+            getAllDesc()
+            fragmentConfirmedBinding.swipeConfirmedContainer.isRefreshing = false
+        }
+
+        return fragmentConfirmedBinding.root
+    }
+
+    private fun getAllDesc() {
+        fragmentConfirmedBinding.progressBar.visibility = View.VISIBLE
         viewModel.getAllConfirmedReportsDesc(fragmentConfirmedBinding)
             .observe(viewLifecycleOwner, { list ->
                 reportAdapter.setReports(list)
                 fragmentConfirmedBinding.progressBar.visibility = View.GONE
             })
+    }
 
-        return fragmentConfirmedBinding.root
+    private fun getAllAsc() {
+        fragmentConfirmedBinding.progressBar.visibility = View.VISIBLE
+        viewModel.getAllConfirmedReports(
+            fragmentConfirmedBinding
+        ).observe(viewLifecycleOwner, { list ->
+            reportAdapter.setReports(list)
+            fragmentConfirmedBinding.progressBar.visibility = View.GONE
+        })
     }
 
     override fun onPrepareOptionsMenu(menu: Menu) {
@@ -59,22 +79,10 @@ class ConfirmedFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.sortNewest -> {
-                fragmentConfirmedBinding.progressBar.visibility = View.VISIBLE
-                viewModel.getAllConfirmedReportsDesc(
-                    fragmentConfirmedBinding
-                ).observe(viewLifecycleOwner, { list ->
-                    reportAdapter.setReports(list)
-                    fragmentConfirmedBinding.progressBar.visibility = View.GONE
-                })
+                getAllDesc()
             }
             R.id.sortOldest -> {
-                fragmentConfirmedBinding.progressBar.visibility = View.VISIBLE
-                viewModel.getAllConfirmedReports(
-                    fragmentConfirmedBinding
-                ).observe(viewLifecycleOwner, { list ->
-                    reportAdapter.setReports(list)
-                    fragmentConfirmedBinding.progressBar.visibility = View.GONE
-                })
+                getAllAsc()
             }
         }
         item.isChecked = true

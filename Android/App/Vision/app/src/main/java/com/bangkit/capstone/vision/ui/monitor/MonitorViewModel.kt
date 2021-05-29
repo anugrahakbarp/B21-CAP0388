@@ -41,12 +41,7 @@ class MonitorViewModel : ViewModel() {
                             c.add(0)
                             Log.d("Finish Status Report", "Empty")
                             binding.progressBar.visibility = View.GONE
-                            if (confirmItem.isEmpty && finishItem.isEmpty) {
-                                binding.cvAllChart.visibility = View.GONE
-                                binding.imgNoData.visibility = View.VISIBLE
-                            } else {
-                                allCount.postValue(c)
-                            }
+                            allCount.postValue(c)
                         } else {
                             c.add(finishItem.documents.size)
                             allFinish.postValue(finishItem.documents.size)
@@ -109,12 +104,7 @@ class MonitorViewModel : ViewModel() {
                                             c.add(0)
                                             Log.d("Count Status Reject", "Empty")
                                             binding.progressBar.visibility = View.GONE
-                                            if (confirmItem.isEmpty && finishItem.isEmpty && pendingItem.isEmpty && rejectItem.isEmpty) {
-                                                binding.cvMyChart.visibility = View.GONE
-                                                binding.imgNoData.visibility = View.VISIBLE
-                                            } else {
-                                                myCount.postValue(c)
-                                            }
+                                            myCount.postValue(c)
                                         } else {
                                             c.add(rejectItem.documents.size)
                                             myReject.postValue(rejectItem.documents.size)

@@ -45,6 +45,17 @@ class MyRejectedFragment : Fragment() {
             setHasFixedSize(true)
         }
 
+        getAllDesc()
+
+        fragmentRejectedBinding.swipeRejectedContainer.setOnRefreshListener {
+            getAllDesc()
+            fragmentRejectedBinding.swipeRejectedContainer.isRefreshing = false
+        }
+
+        return fragmentRejectedBinding.root
+    }
+
+    private fun getAllDesc() {
         fragmentRejectedBinding.progressBar.visibility = View.VISIBLE
         viewModel.getMyRejectedReportsDesc(
             username,
@@ -53,8 +64,17 @@ class MyRejectedFragment : Fragment() {
             reportAdapter.setReports(list)
             fragmentRejectedBinding.progressBar.visibility = View.GONE
         })
+    }
 
-        return fragmentRejectedBinding.root
+    private fun getAllAsc() {
+        fragmentRejectedBinding.progressBar.visibility = View.VISIBLE
+        viewModel.getMyRejectedReports(
+            username,
+            fragmentRejectedBinding
+        ).observe(viewLifecycleOwner, { list ->
+            reportAdapter.setReports(list)
+            fragmentRejectedBinding.progressBar.visibility = View.GONE
+        })
     }
 
     override fun onPrepareOptionsMenu(menu: Menu) {
@@ -68,24 +88,10 @@ class MyRejectedFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.sortNewest -> {
-                fragmentRejectedBinding.progressBar.visibility = View.VISIBLE
-                viewModel.getMyRejectedReportsDesc(
-                    username,
-                    fragmentRejectedBinding
-                ).observe(viewLifecycleOwner, { list ->
-                    reportAdapter.setReports(list)
-                    fragmentRejectedBinding.progressBar.visibility = View.GONE
-                })
+                getAllDesc()
             }
             R.id.sortOldest -> {
-                fragmentRejectedBinding.progressBar.visibility = View.VISIBLE
-                viewModel.getMyRejectedReports(
-                    username,
-                    fragmentRejectedBinding
-                ).observe(viewLifecycleOwner, { list ->
-                    reportAdapter.setReports(list)
-                    fragmentRejectedBinding.progressBar.visibility = View.GONE
-                })
+                getAllAsc()
             }
         }
         item.isChecked = true

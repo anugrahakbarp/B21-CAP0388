@@ -35,6 +35,11 @@
             android:checked="false"
             android:title="@string/oldest"
             android:visible="false" />
+        <item
+            android:id="@+id/sortDistance"
+            android:checked="false"
+            android:title="@string/distance"
+            android:visible="false" />
     </group>
 
 </menu>

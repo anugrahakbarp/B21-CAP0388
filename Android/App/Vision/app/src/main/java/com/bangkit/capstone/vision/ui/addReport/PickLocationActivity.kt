@@ -138,6 +138,7 @@ class PickLocationActivity : AppCompatActivity(), OnMapReadyCallback,
         mMap.setOnCameraIdleListener(this)
         mMap.uiSettings.isScrollGesturesEnabled = false
         mMap.uiSettings.isZoomGesturesEnabled = false
+        mMap.uiSettings.setAllGesturesEnabled(false)
 
         buildGoogleApiClient()
     }
@@ -224,6 +225,7 @@ class PickLocationActivity : AppCompatActivity(), OnMapReadyCallback,
                             dialog.dismiss()
                             mMap.uiSettings.isScrollGesturesEnabled = false
                             mMap.uiSettings.isZoomGesturesEnabled = false
+                            mMap.uiSettings.setAllGesturesEnabled(false)
                         }
                         alertDialog.show()
                     }
@@ -309,6 +311,7 @@ class PickLocationActivity : AppCompatActivity(), OnMapReadyCallback,
                             )
                             mMap.uiSettings.isScrollGesturesEnabled = false
                             mMap.uiSettings.isZoomGesturesEnabled = false
+                            mMap.uiSettings.setAllGesturesEnabled(false)
                         } else {
                             checkLocation()
                         }
@@ -412,6 +415,7 @@ class PickLocationActivity : AppCompatActivity(), OnMapReadyCallback,
                     activityPickLocationBinding.btnDone.isEnabled = true
                     mMap.uiSettings.isScrollGesturesEnabled = true
                     mMap.uiSettings.isZoomGesturesEnabled = true
+                    mMap.uiSettings.setAllGesturesEnabled(true)
                 }
             } catch (e: Exception) {
                 e.printStackTrace()

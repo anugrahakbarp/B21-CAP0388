@@ -93,8 +93,14 @@
     <string name="internet_required">Internet Required !</string>
     <string name="location_required">Location Required !</string>
     <string name="please_pick_image">Please pick an image !</string>
-    <string name="sample_distance">2 Km from your location</string>
+    <string name="sample_distance">2 Km from User</string>
     <string name="cancel">Cancel</string>
     <string name="ensure_good_connection">Ensure you have good internet connection</string>
     <string name="please_onoff_location">Please turn your location off and on again</string>
+    <string name="ensure_upload_report">Are you sure to report this ?</string>
+    <string name="sure">Sure</string>
+    <string name="distance">Distance</string>
+    <string name="yes">Yes</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="want_to_send_report">Do you want to send this report?</string>
 </resources>

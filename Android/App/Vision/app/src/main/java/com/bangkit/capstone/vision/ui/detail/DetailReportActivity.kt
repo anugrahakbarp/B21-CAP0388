@@ -56,7 +56,8 @@ class DetailReportActivity : AppCompatActivity() {
             activityDetailReportBinding.tvBestAccuracy.text = report?.prediction
             activityDetailReportBinding.tvUploadedBy.text = report?.upload_by
             activityDetailReportBinding.tvTime.text = DateUtils.getFromDate(report!!.time)
-            activityDetailReportBinding.tvAddress.text = "${report?.address} - ${report?.distance} from your location"
+            activityDetailReportBinding.tvAddress.text =
+                "${report?.address} - ${report?.distance} from ${report?.upload_by}"
             activityDetailReportBinding.tvNote.text = report?.note
             when (report?.status) {
                 "Pending" -> {
