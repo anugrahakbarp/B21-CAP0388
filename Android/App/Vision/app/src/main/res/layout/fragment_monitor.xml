@@ -26,84 +26,91 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_nodatasvg" />
 
-    <ScrollView
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeMonitorContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvAllChart"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/all_corner_ten_radius_white"
-                android:orientation="vertical"
-                android:padding="20dp"
-                android:visibility="visible"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="8dp"
-                app:layout_constraintTop_toTopOf="parent">
+                android:orientation="vertical">
 
-                <TextView
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvAllChart"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="10dp"
-                    android:gravity="center"
-                    android:text="@string/title_all_report"
-                    android:textColor="@color/label"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/all_corner_ten_radius_white"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:visibility="visible"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="8dp"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                <com.github.mikephil.charting.charts.BarChart
-                    android:id="@+id/allChart"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="40dp"
-                    android:minHeight="200dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:gravity="center"
+                        android:text="@string/title_all_report"
+                        android:textColor="@color/label"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-            </androidx.cardview.widget.CardView>
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/allChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="40dp"
+                        android:minHeight="200dp" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvMyChart"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginVertical="10dp"
-                android:background="@drawable/all_corner_ten_radius_white"
-                android:orientation="vertical"
-                android:padding="20dp"
-                android:visibility="visible"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="8dp"
-                app:layout_constraintTop_toTopOf="parent">
+                </androidx.cardview.widget.CardView>
 
-                <TextView
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvMyChart"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
                     android:layout_marginVertical="10dp"
-                    android:gravity="center"
-                    android:text="@string/title_my_report"
-                    android:textColor="@color/label"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:background="@drawable/all_corner_ten_radius_white"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:visibility="visible"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="8dp"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                <com.github.mikephil.charting.charts.BarChart
-                    android:id="@+id/myChart"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="40dp"
-                    android:minHeight="200dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:gravity="center"
+                        android:text="@string/title_my_report"
+                        android:textColor="@color/label"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-            </androidx.cardview.widget.CardView>
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/myChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="40dp"
+                        android:minHeight="200dp" />
 
-        </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-    </ScrollView>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

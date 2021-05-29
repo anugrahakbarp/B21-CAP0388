@@ -46,6 +46,13 @@ class MonitorFragment : Fragment() {
         setAllChart(allChart)
         setMyChart(myChart, username)
 
+        fragmentMonitorBinding.swipeMonitorContainer.setOnRefreshListener {
+            fragmentMonitorBinding.progressBar.visibility = View.VISIBLE
+            setAllChart(allChart)
+            setMyChart(myChart, username)
+            fragmentMonitorBinding.swipeMonitorContainer.isRefreshing = false
+        }
+
         return fragmentMonitorBinding.root
     }
 
