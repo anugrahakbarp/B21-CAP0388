@@ -29,4 +29,10 @@ internal class UserPreference(context: Context) {
         editor.remove(USERNAME)
         editor.apply()
     }
+
+    fun clearUser() {
+        val editor = preferences.edit()
+        editor.clear()
+        editor.apply()
+    }
 }

@@ -1,7 +1,6 @@
 package com.bangkit.capstone.vision.ui.auth
 
 import android.app.AlertDialog
-import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -16,15 +15,18 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager.widget.ViewPager
 import com.bangkit.capstone.vision.R
 import com.bangkit.capstone.vision.databinding.FragmentLoginBinding
+import com.bangkit.capstone.vision.model.UserModel
 import com.bangkit.capstone.vision.ui.MainActivity
 import com.bangkit.capstone.vision.ui.UserPreference
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.FirebaseFirestoreSettings
 
 class LoginFragment : Fragment() {
 
     private lateinit var fragmentLoginBinding: FragmentLoginBinding
     private lateinit var db: FirebaseFirestore
+    private lateinit var mUserPreference: UserPreference
 
     companion object {
         private var SNACKBAR_SUCCESS_CODE = "snackbar_success"
@@ -36,15 +38,21 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         fragmentLoginBinding = FragmentLoginBinding.inflate(layoutInflater, container, false)
-        return fragmentLoginBinding.root
-    }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        val dbSetting = FirebaseFirestoreSettings.Builder()
+            .setPersistenceEnabled(false)
+            .build()
         db = FirebaseFirestore.getInstance()
+        db.firestoreSettings = dbSetting
+
+        mUserPreference = UserPreference(requireContext())
+        mUserPreference.clearUser()
+
         fragmentLoginBinding.btnLogin.setOnClickListener {
             validateForm()
         }
+
+        return fragmentLoginBinding.root
     }
 
     private fun validateForm() {
@@ -76,13 +84,8 @@ class LoginFragment : Fragment() {
             } else {
                 it.forEach {
                     if (username == it.data["username"] && password == it.data["password"] && "user" == it.data["level"]) {
-                        val preferences = context?.getSharedPreferences(
-                            UserPreference.PREFS_NAME,
-                            Context.MODE_PRIVATE
-                        )
-                        val editor = preferences?.edit()
-                        editor?.putString(UserPreference.USERNAME, username)
-                        editor?.apply()
+                        val userModel = UserModel(username)
+                        mUserPreference.setUser(userModel)
                         progress.dismiss()
                         val intent = Intent(activity, MainActivity::class.java)
                         startActivity(intent)
