@@ -18,6 +18,12 @@ import com.bangkit.capstone.vision.databinding.FragmentLoginBinding
 import com.bangkit.capstone.vision.model.UserModel
 import com.bangkit.capstone.vision.ui.MainActivity
 import com.bangkit.capstone.vision.ui.UserPreference
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.tasks.Task
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
@@ -27,10 +33,12 @@ class LoginFragment : Fragment() {
     private lateinit var fragmentLoginBinding: FragmentLoginBinding
     private lateinit var db: FirebaseFirestore
     private lateinit var mUserPreference: UserPreference
+    private lateinit var mGoogleSignInClient: GoogleSignInClient
 
     companion object {
         private var SNACKBAR_SUCCESS_CODE = "snackbar_success"
         private var SNACKBAR_ERROR_CODE = "snackbar_error"
+        const val RC_SIGN_IN = 1
     }
 
     override fun onCreateView(
@@ -52,7 +60,23 @@ class LoginFragment : Fragment() {
             validateForm()
         }
 
+        val gso: GoogleSignInOptions =
+            GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build()
+
+        mGoogleSignInClient = GoogleSignIn.getClient(requireActivity(), gso)
+
+        fragmentLoginBinding.btnGoogleLogin.setOnClickListener {
+            signInWithGoogle()
+        }
+
         return fragmentLoginBinding.root
+    }
+
+    private fun signInWithGoogle() {
+        val signInIntent = mGoogleSignInClient.signInIntent
+        startActivityForResult(signInIntent, RC_SIGN_IN)
     }
 
     private fun validateForm() {
@@ -70,44 +94,52 @@ class LoginFragment : Fragment() {
     }
 
     private fun validateUser(username: String, password: String, activity: FragmentActivity?) {
-        val progress = progress()
-        progress.show()
-        progress.window!!.setLayout(500, 500)
-        db.collection("users").whereEqualTo("username", username).get().addOnSuccessListener { it ->
-            if (it.isEmpty) {
-                snackBar(
-                    fragmentLoginBinding.root,
-                    getString(R.string.user_not_found),
-                    SNACKBAR_ERROR_CODE
-                ).show()
-                progress.dismiss()
-            } else {
-                it.forEach {
-                    if (username == it.data["username"] && password == it.data["password"] && "user" == it.data["level"]) {
-                        val userModel = UserModel(username)
-                        mUserPreference.setUser(userModel)
-                        progress.dismiss()
-                        val intent = Intent(activity, MainActivity::class.java)
-                        startActivity(intent)
-                        activity?.finish()
-                    } else {
+        val account = GoogleSignIn.getLastSignedInAccount(activity)
+        if (account != null) {
+            val intent = Intent(activity, MainActivity::class.java)
+            startActivity(intent)
+            activity?.finish()
+        } else {
+            val progress = progress()
+            progress.show()
+            progress.window!!.setLayout(500, 500)
+            db.collection("users").whereEqualTo("username", username).get()
+                .addOnSuccessListener { it ->
+                    if (it.isEmpty) {
                         snackBar(
                             fragmentLoginBinding.root,
-                            getString(R.string.login_incorrect),
+                            getString(R.string.user_not_found),
                             SNACKBAR_ERROR_CODE
                         ).show()
                         progress.dismiss()
+                    } else {
+                        it.forEach {
+                            if (username == it.data["username"] && password == it.data["password"] && "user" == it.data["level"]) {
+                                val userModel = UserModel(username)
+                                mUserPreference.setUser(userModel)
+                                progress.dismiss()
+                                val intent = Intent(activity, MainActivity::class.java)
+                                startActivity(intent)
+                                activity?.finish()
+                            } else {
+                                snackBar(
+                                    fragmentLoginBinding.root,
+                                    getString(R.string.login_incorrect),
+                                    SNACKBAR_ERROR_CODE
+                                ).show()
+                                progress.dismiss()
+                            }
+                        }
                     }
+                }.addOnFailureListener {
+                    snackBar(
+                        fragmentLoginBinding.root,
+                        getString(R.string.login_failed),
+                        SNACKBAR_ERROR_CODE
+                    ).show()
+                    Log.d("Failure", it.cause.toString())
+                    progress.dismiss()
                 }
-            }
-        }.addOnFailureListener {
-            snackBar(
-                fragmentLoginBinding.root,
-                getString(R.string.login_failed),
-                SNACKBAR_ERROR_CODE
-            ).show()
-            Log.d("Failure", it.cause.toString())
-            progress.dismiss()
         }
     }
 
@@ -143,6 +175,36 @@ class LoginFragment : Fragment() {
         builder.setView(R.layout.progress_login)
         builder.setCancelable(false)
         return builder.create()
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        when (requestCode) {
+            RC_SIGN_IN -> {
+                val progress = progress()
+                progress.show()
+                progress.window!!.setLayout(500, 500)
+                val task: Task<GoogleSignInAccount> =
+                    GoogleSignIn.getSignedInAccountFromIntent(data)
+                try {
+                    val account = task.getResult(ApiException::class.java)
+                    val userModel = UserModel(account.email)
+                    mUserPreference.setUser(userModel)
+                    val intent = Intent(activity, MainActivity::class.java)
+                    startActivity(intent)
+                    activity?.finish()
+                    progress().dismiss()
+                } catch (e: ApiException) {
+                    progress().dismiss()
+                    snackBar(
+                        fragmentLoginBinding.root,
+                        getString(R.string.login_failed),
+                        SNACKBAR_ERROR_CODE
+                    ).show()
+                    Log.w("Google Login Failed", "signInResult:failed code=" + e.statusCode)
+                }
+            }
+        }
     }
 
 }

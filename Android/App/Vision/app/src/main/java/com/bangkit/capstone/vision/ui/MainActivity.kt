@@ -2,10 +2,12 @@ package com.bangkit.capstone.vision.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -17,6 +19,9 @@ import androidx.navigation.ui.setupWithNavController
 import com.bangkit.capstone.vision.R
 import com.bangkit.capstone.vision.databinding.ActivityMainBinding
 import com.bangkit.capstone.vision.ui.auth.AuthenticationActivity
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
@@ -25,6 +30,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private lateinit var binding: ActivityMainBinding
 
     private lateinit var mUserPreference: UserPreference
+
+    private lateinit var mGoogleSignInClient: GoogleSignInClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,12 +46,24 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val header = binding.navDrawerView.getHeaderView(0)
 
+        val gso: GoogleSignInOptions =
+            GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build()
+
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
+
         header.findViewById<TextView>(R.id.tvUsernameDrawer).text = mUserModel.username
         header.findViewById<Button>(R.id.btnLogout).setOnClickListener {
-            mUserPreference.removeUser()
-            val intent = Intent(this, AuthenticationActivity::class.java)
-            startActivity(intent)
-            finish()
+            mGoogleSignInClient.signOut().addOnSuccessListener {
+                mUserPreference.removeUser()
+                val intent = Intent(this, AuthenticationActivity::class.java)
+                startActivity(intent)
+                finish()
+            }.addOnFailureListener {
+                Toast.makeText(this, getString(R.string.login_failed), Toast.LENGTH_LONG).show()
+                Log.w("Google Logout Failed", "failed code=" + it.cause)
+            }
         }
 
         val toggle = ActionBarDrawerToggle(
@@ -80,11 +99,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        var fragment: Fragment? = null
-        var title = getString(R.string.app_name)
-        when (item.itemId) {
-
-        }
+        val fragment: Fragment? = null
+        val title = getString(R.string.app_name)
         if (fragment != null) {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.nav_host_fragment, fragment)

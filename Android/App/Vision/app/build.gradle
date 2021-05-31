@@ -19,7 +19,7 @@ android {
         vectorDrawables { useSupportLibrary = true }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField("String", "API_KEY", '"YOUR_DISTANCE_MATRIX_API_KEY"')
+        buildConfigField("String", "API_KEY", '"AIzaSyDxWB9jH6gDuFKV9p--7_hhz-zQ_h3QppY"')
         buildConfigField("String", "BASE_URL", '"https://maps.googleapis.com/"')
     }
 
@@ -65,8 +65,10 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:17.0.1'
     implementation 'com.google.android.gms:play-services-location:18.0.0'
 
+    //auth
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+
     //api
-//    implementation 'com.squareup.retrofit2:converter-jackson:2.2.0'
     implementation "com.squareup.retrofit2:converter-gson:2.9.0"
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2"

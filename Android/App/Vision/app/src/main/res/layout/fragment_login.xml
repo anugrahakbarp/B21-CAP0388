@@ -96,6 +96,18 @@
             android:text="@string/title_login"
             android:textColor="@color/white" />
 
+        <View
+            android:background="@color/label"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <com.google.android.gms.common.SignInButton
+            android:layout_gravity="center"
+            android:id="@+id/btnGoogleLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
