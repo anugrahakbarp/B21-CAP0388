@@ -260,7 +260,9 @@ class PickLocationActivity : AppCompatActivity(), OnMapReadyCallback,
                     checkLocation()
                     dialog.dismiss()
                 }
-                alertDialog.show()
+                if(window.decorView.rootView.isShown){
+                    alertDialog.show()
+		}
             }
         } else {
             appExecutors.mainThread().execute {

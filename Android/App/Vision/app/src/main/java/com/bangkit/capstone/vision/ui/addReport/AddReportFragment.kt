@@ -8,7 +8,9 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.FrameLayout
 import android.widget.Toast
@@ -29,7 +31,6 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.GeoPoint
 import com.google.firebase.storage.FirebaseStorage
 import com.theartofdev.edmodo.cropper.CropImage
-import com.theartofdev.edmodo.cropper.CropImageOptions
 import com.theartofdev.edmodo.cropper.CropImageView
 import java.io.ByteArrayOutputStream
 import java.util.*
@@ -119,7 +120,7 @@ class AddReportFragment : Fragment() {
                             getString(R.string.image_invalid),
                             SNACKBAR_ERROR_CODE
                         ).show()
-                        clearForm()
+                        clearInvalidImage()
                     }
                 }
             } else {
@@ -130,7 +131,7 @@ class AddReportFragment : Fragment() {
                         getString(R.string.cant_detect),
                         SNACKBAR_ERROR_CODE
                     ).show()
-                    clearForm()
+                    clearInvalidImage()
                 }
             }
         }).start()
@@ -333,6 +334,14 @@ class AddReportFragment : Fragment() {
         fragmentAddReportBinding.tvAccuracy.visibility = View.GONE
         fragmentAddReportBinding.tvTitleAccuracy.visibility = View.GONE
         fragmentAddReportBinding.imgCaptured.setImageDrawable(null)
+        imageBitmap = null
+    }
+
+    private fun clearInvalidImage() {
+        fragmentAddReportBinding.imgCaptured.setImageDrawable(null)
+        fragmentAddReportBinding.tvTitleAccuracy.visibility = View.GONE
+        fragmentAddReportBinding.tvAccuracy.visibility = View.GONE
+        fragmentAddReportBinding.tvAccuracy.text = ""
         imageBitmap = null
     }
 
