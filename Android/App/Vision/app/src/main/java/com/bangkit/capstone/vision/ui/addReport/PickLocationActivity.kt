@@ -36,9 +36,7 @@ import com.bangkit.capstone.vision.utils.AppExecutors
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.common.util.CollectionUtils
-import com.google.android.gms.location.FusedLocationProviderClient
-import com.google.android.gms.location.LocationRequest
-import com.google.android.gms.location.LocationServices
+import com.google.android.gms.location.*
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapsInitializer
@@ -260,9 +258,9 @@ class PickLocationActivity : AppCompatActivity(), OnMapReadyCallback,
                     checkLocation()
                     dialog.dismiss()
                 }
-                if(window.decorView.rootView.isShown){
+                if (window.decorView.rootView.isShown) {
                     alertDialog.show()
-		}
+                }
             }
         } else {
             appExecutors.mainThread().execute {
@@ -273,9 +271,8 @@ class PickLocationActivity : AppCompatActivity(), OnMapReadyCallback,
 
     private fun isLocationEnabled(mContext: Context): Boolean {
         val lm = mContext.getSystemService(Context.LOCATION_SERVICE) as LocationManager
-        return lm.isProviderEnabled(LocationManager.GPS_PROVIDER) || lm.isProviderEnabled(
-            LocationManager.NETWORK_PROVIDER
-        )
+        return lm.isProviderEnabled(LocationManager.GPS_PROVIDER) ||
+                lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER)
     }
 
     private fun checkPermission() {
@@ -299,12 +296,17 @@ class PickLocationActivity : AppCompatActivity(), OnMapReadyCallback,
     private fun getCurrentLocation() {
         checkPermission()
         activityPickLocationBinding.btnDone.isEnabled = false
-        Thread(Runnable {
-            if (isLocationEnabled(this)) {
-                if (mGoogleApiClient != null) {
-                    client.lastLocation.addOnSuccessListener { myLocation ->
-                        if (myLocation != null) {
-                            userLatLng = LatLng(myLocation.latitude, myLocation.longitude)
+        if (isLocationEnabled(this)) {
+            if (mGoogleApiClient != null) {
+                val request = LocationRequest()
+                request.priority = LocationRequest.PRIORITY_HIGH_ACCURACY
+                client.requestLocationUpdates(request, object : LocationCallback() {
+                    override fun onLocationResult(location: LocationResult) {
+                        if (location != null) {
+                            userLatLng = LatLng(
+                                location.lastLocation.latitude,
+                                location.lastLocation.longitude
+                            )
                             mMap.animateCamera(
                                 CameraUpdateFactory.newLatLngZoom(
                                     userLatLng!!,
@@ -314,10 +316,10 @@ class PickLocationActivity : AppCompatActivity(), OnMapReadyCallback,
                             mMap.uiSettings.isScrollGesturesEnabled = false
                             mMap.uiSettings.isZoomGesturesEnabled = false
                             mMap.uiSettings.setAllGesturesEnabled(false)
-                        } else {
-                            checkLocation()
                         }
-                    }.addOnFailureListener {
+                    }
+                }, null).addOnFailureListener {
+                    appExecutors.mainThread().execute {
                         val alertDialog = AlertDialog.Builder(this)
                         alertDialog.setCancelable(false)
                         alertDialog.setTitle(getString(R.string.connection_required))
@@ -339,16 +341,16 @@ class PickLocationActivity : AppCompatActivity(), OnMapReadyCallback,
                         alertDialog.show()
                     }
                 }
-            } else {
-                appExecutors.mainThread().execute {
-                    snackBar(
-                        activityPickLocationBinding.root,
-                        getString(R.string.enable_location),
-                        SNACKBAR_ERROR_CODE
-                    ).show()
-                }
             }
-        }).start()
+        } else {
+            appExecutors.mainThread().execute {
+                snackBar(
+                    activityPickLocationBinding.root,
+                    getString(R.string.enable_location),
+                    SNACKBAR_ERROR_CODE
+                ).show()
+            }
+        }
     }
 
     override fun onConnected(bundle: Bundle?) {
