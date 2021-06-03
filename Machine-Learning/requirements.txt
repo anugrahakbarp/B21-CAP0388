@@ -86,8 +86,7 @@ Flask==1.1.4
 flatbuffers==1.12               
 folium==0.8.3              
 future==0.16.0             
-gast==0.4.0              
-GDAL==2.2.2              
+gast==0.4.0                         
 gdown==3.6.4              
 gensim==3.6.0              
 geographiclib==1.50               
