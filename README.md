@@ -172,7 +172,6 @@ Distributed under the GNU GENERAL PUBLIC LICENSE VERSION 3. See `LICENSE` for mo
 * Carmelita Evani Dasopang - [null](https://mail.google.com/mail/u/0/#inbox?compose=new)
 * Muhammad Dicky Amirudin - [dicky.king35@gmail.com](https://mail.google.com/mail/u/0/#inbox?compose=new)
 * Naufaldy Salsabila - [naufaldysalsabila@gmail.com](https://mail.google.com/mail/u/0/#inbox?compose=new)
-* Wily Silviana Yeni Pratama - [null](https://mail.google.com/mail/u/0/#inbox?compose=new)
 
 Project Link: [https://github.com/anugrahakbarp/B21-CAP0388](https://github.com/anugrahakbarp/B21-CAP0388)
 
