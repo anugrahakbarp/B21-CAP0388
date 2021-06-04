@@ -23,11 +23,13 @@
 8. Upload the weight files using SSH "built-in upload features" and choose the weight from your local computer
 9. On SSH run:
 * "mv ~/yolov4-custom_best.weights ~/B21-CAP0388/backend"
-* "python app.py &" --> & symbol from bash for running on the background so you can running without the server being interupted.
+10. EXIT SSH
+11. On Cloud Shell TERMINAL:
+* "gcloud compute ssh --zone={VM INSTANCE ZONE} {VM INSTANCE NAME} --command="cd ~/B21-CAP0388/Backend && nohup python app.py &" --> using 'nohup' command and '&' from bash for running on the background so you can running without the server being interupted.
 
-10. Go through your http://YOUR-GCE-EXTERNAL-IP-ADDRESS:5000 (ON DEFAULT IT WILL RETURN INTERNAL NOT EXTERNAL)
-11. Choose files and sent the response.
-12. If nothing happen after sending a HTTP Method to the web server, it means that it doesn't get detected OR it might be have an error response such as server error response. 
+12. Go through your http://YOUR-GCE-EXTERNAL-IP-ADDRESS:5000 (ON DEFAULT IT WILL RETURN INTERNAL NOT EXTERNAL)
+13. Choose files and sent the response.
+14. If nothing happen after sending a HTTP Method to the web server, it means that it doesn't get detected OR it might be have an error response such as server error response. 
 
 Please Check:
 (https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#server_error_responses)
