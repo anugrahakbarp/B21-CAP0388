@@ -42,7 +42,7 @@
   <p align="center">
     Documentation Available Here:
     <br />
-    <a href="https://docs.google.com/document/d/1-W_qnjDcqY2GAJGV1wSwdfEx_0f4BUwIOsrZp9TgY0U/edit?usp=sharing"><strong>Explore the docs »</strong></a>
+    <a href=""><strong>Explore the docs (NOT AVAILABLE FOR NOW)»</strong></a>
     <br />
     <br />
     <a href="https://drive.google.com/file/d/1bJIlXPU_RoohGWevgEt_p-BEMLe15mgd/view?usp=drivesdk">View Demo</a>
