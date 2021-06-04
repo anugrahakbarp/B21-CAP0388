@@ -1,6 +1,6 @@
 #HOW TO USE
 
-1. Go to your console.cloud.google.com
+1. Go to your https://console.cloud.google.com/
 2. On Compute Engine, Create New Instance and allow http request
 3. Create a firewall rules on "VPC Network -> Firewall Rules"
 <p align="center">
