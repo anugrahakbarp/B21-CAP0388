@@ -2,8 +2,11 @@
 
 1. Go to your console.cloud.google.com
 2. On Compute Engine, Create New Instance and allow http request
-3. Open SSH from your VM Instance on Compute Engine
-4. On SSH run:
+3. Create a firewall rules on "VPC Network -> Firewall Rules"
+https://user-images.githubusercontent.com/69615570/120776862-dfee7600-c54e-11eb-840b-8e2bd7141f3f.png
+
+4. Open SSH from your VM Instance on Compute Engine
+5. On SSH run:
 * "sudo apt update && upgrade"
 * "sudo apt install python3.7, git, python-pip"
 * "update-alternatives --install /usr/bin/python python /usr/bin/python3 1"
@@ -12,15 +15,16 @@
 * "cd ~/B21-CAP0388/Backend/static/"
 * "nano index.js"
 
-5. edit the url, replace the localhost to your external ip from GCE
-6. download the weight files from https://drive.google.com/uc?export=download&id=1-3jWwLJoYnjQ3Nte9ikJmgv0iwJOCaIU
-7. Upload the weight files using SSH "built-in upload features" and choose the weight from your local computer
-8. On SSH run:
+6. edit the url, replace the localhost to your external ip from GCE
+7. download the weight files from https://drive.google.com/uc?export=download&id=1-3jWwLJoYnjQ3Nte9ikJmgv0iwJOCaIU
+8. Upload the weight files using SSH "built-in upload features" and choose the weight from your local computer
+9. On SSH run:
 * "mv ~/yolov4-custom_best.weights ~/B21-CAP0388/backend"
 * "python app.py &" --> & symbol from bash for running on the background so you can running without the server being interupted.
 
-9. Go through your http://YOUR-GCE-EXTERNAL-IP-ADDRESS:5000 (ON DEFAULT IT WILL RETURN INTERNAL NOT EXTERNAL)
-10. Choose files and sent the response.
-11. If nothing happen sent the response to web server, it means that it doesn't get detected OR it might be have an error response such as server error response.
+10. Go through your http://YOUR-GCE-EXTERNAL-IP-ADDRESS:5000 (ON DEFAULT IT WILL RETURN INTERNAL NOT EXTERNAL)
+11. Choose files and sent the response.
+12. If nothing happen sent the response to the web server, it means that it doesn't get detected OR it might be have an error response such as server error response. 
 
-Check --> (https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#server_error_responses)
+Please Check:
+(https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#server_error_responses)
