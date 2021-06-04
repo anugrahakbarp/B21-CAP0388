@@ -12,6 +12,7 @@
 5. On SSH run:
 * "sudo apt update && upgrade"
 * "sudo apt install python3.7, git, python-pip"
+* "git clone https://github.com/anugrahakbarp/B21-CAP0388.git"
 * "update-alternatives --install /usr/bin/python python /usr/bin/python3 1"
 * "pip3 install --upgrade pip"
 * "pip3 install Flask, Pillow, numpy, opencv-python"
