@@ -7,7 +7,7 @@ window.onload = () => {
 			let formData = new FormData();
 			formData.append('image' , input.files[0]);
 			$.ajax({
-				url: "http://localhost:5000/detectObject", // fix this to your liking
+				url: "http://localhost:5000/detectObject", // fix this to your GCE EXTERNAL IP
 				type:"POST",
 				data: formData,
 				cache: false,
