@@ -27,7 +27,6 @@ def mask_image():
 	rawBytes.seek(0)
 	img_base64 = base64.b64encode(rawBytes.read())
 	return jsonify({'status':str(img_base64)})
-
 ######################################## THE REAL DEAL HAPPENS ABOVE ######################################
 
 @app.route('/test' , methods=['GET','POST'])
