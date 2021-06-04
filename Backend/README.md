@@ -18,8 +18,8 @@
 * "cd ~/B21-CAP0388/Backend/static/"
 * "nano index.js"
 
-6. edit the url, replace the localhost to your external ip from GCE
-7. download the weight files from https://drive.google.com/uc?export=download&id=1-3jWwLJoYnjQ3Nte9ikJmgv0iwJOCaIU
+6. Edit the url, replace the localhost to your external ip from GCE
+7. Download the weight files from https://drive.google.com/uc?export=download&id=1-3jWwLJoYnjQ3Nte9ikJmgv0iwJOCaIU
 8. Upload the weight files using SSH "built-in upload features" and choose the weight from your local computer
 9. On SSH run:
 * "mv ~/yolov4-custom_best.weights ~/B21-CAP0388/backend"
