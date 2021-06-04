@@ -17,7 +17,7 @@
 7. Upload the weight files using SSH "built-in upload features" and choose the weight from your local computer
 8. On SSH run:
 * "mv ~/yolov4-custom_best.weights ~/B21-CAP0388/backend"
-* "python app.py"
+* "python app.py &" --> & symbol from bash for running on the background so you can running without the server being interupted.
 
 9. Go through your http://YOUR-GCE-EXTERNAL-IP-ADDRESS:5000 (ON DEFAULT IT WILL RETURN INTERNAL NOT EXTERNAL)
 10. Choose files and sent the response.
