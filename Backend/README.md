@@ -24,7 +24,7 @@
 9. On SSH run:
 * "mv ~/yolov4-custom_best.weights ~/B21-CAP0388/backend"
 10. EXIT SSH
-11. On Cloud Shell TERMINAL:
+11. On Cloud Shell TERMINAL run:
 * "gcloud compute ssh --zone={VM INSTANCE ZONE} {VM INSTANCE NAME} --command="cd ~/B21-CAP0388/Backend && nohup python app.py &" --> using 'nohup' command and '&' from bash for running on the background so you can running without the server being interupted.
 
 12. Go through your http://YOUR-GCE-EXTERNAL-IP-ADDRESS:5000 (ON DEFAULT IT WILL RETURN INTERNAL NOT EXTERNAL)
