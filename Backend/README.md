@@ -23,4 +23,4 @@
 10. Choose files and sent the response.
 11. If nothing happen sent the response to web server, it means that it doesn't get detected OR it might be have an error response such as server error response.
 
-Check --> (https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses)
+Check --> (https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#server_error_responses)
