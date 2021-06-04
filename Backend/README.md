@@ -25,7 +25,7 @@
 
 10. Go through your http://YOUR-GCE-EXTERNAL-IP-ADDRESS:5000 (ON DEFAULT IT WILL RETURN INTERNAL NOT EXTERNAL)
 11. Choose files and sent the response.
-12. If nothing happen sent the response to the web server, it means that it doesn't get detected OR it might be have an error response such as server error response. 
+12. If nothing happen after sending a HTTP Method to the web server, it means that it doesn't get detected OR it might be have an error response such as server error response. 
 
 Please Check:
 (https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#server_error_responses)
