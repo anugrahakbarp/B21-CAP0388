@@ -5,8 +5,8 @@
 3. Create a firewall rules on "VPC Network -> Firewall Rules"
 <p align="center">
 <img src="https://user-images.githubusercontent.com/69615570/120776862-dfee7600-c54e-11eb-840b-8e2bd7141f3f.png" widht="332" height="454.67">
-  
-  <p PLEASE SET THE PRIORITY to "0" because of some reason align="center">
+  <p align="center">
+  PLEASE SET THE PRIORITY to "0" because of some reason
 
 4. Open SSH from your VM Instance on Compute Engine
 5. On SSH run:
